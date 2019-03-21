@@ -29,6 +29,7 @@ variables:
   value: 'Xamarin.Forms.Build/provisionator.sh'
 - group: Xamarin.Forms
 - group: XQA Secrets
+- group: xamops-azdev-secrets
 
 trigger:
   branches:

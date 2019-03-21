@@ -22,6 +22,11 @@ steps:
       APPLECODESIGNIDENTITYURL: $(AppleCodesignIdentityUrl)
       APPLECODESIGNPROFILEURL: $(AppleCodesignProfileUrl)
 
+  - task: xamops.azdevex.provisionator-task.provisionator@1
+    displayName: Provisionate Xamarin
+    inputs:
+      provisioning_script: build/provisioning.csx
+      provisioning_extra_args: $(provisionator.extraArguments)
 
   - task: NuGetToolInstaller@0
     displayName: 'Use NuGet 4.8.1'
